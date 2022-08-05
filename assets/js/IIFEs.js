@@ -26,9 +26,9 @@ const datosAnimal = (() => {
     }
     const preview = async animal => {
         json = await getData(animal)
-        if (json) get.by('#preview').innerHTML = `<img src="./assets/imgs/${json.imagen}" alt="${animal}">`
+        if (json) get.by('#preview').innerHTML = `<img class="h-100 mw-100 d-block mx-auto" src="./assets/imgs/${json.imagen}" alt="${animal}">`
     }
     return { preview, afterPreview: () => json || {} }
 })()
 
-export { get, danger, datosAnimal}
+export { get, danger, datosAnimal }

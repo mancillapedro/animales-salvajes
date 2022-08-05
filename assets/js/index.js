@@ -4,7 +4,7 @@ import cardTemplate from './templates.js'
 
 Array.prototype.last = function () { return this[this.length - 1] };
 const styleSheet = [...document.styleSheets].last()
-styleSheet.insertRule(`img {object-fit: cover;width: 100%; height: 100%;}`)
+styleSheet.insertRule(`img {object-fit: cover;}`)
 styleSheet.insertRule(`.shadow-danger {box-shadow: 0px 0px 1px 1px var(--danger) !important;}`)
 
 const limpiar = () => {
