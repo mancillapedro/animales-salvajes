@@ -37,8 +37,8 @@ const validar = obj => Object.values(obj).every(value => Boolean(value)) || dang
 
 limpiar()
 get.selects().forEach(_ => _.addEventListener('change', event => {
-    event.originalTarget.id != 'animal' || datosAnimal.preview(event.target.value)
-    danger.remove(event.originalTarget)
+    event.target.id != 'animal' || datosAnimal.preview(event.target.value)
+    danger.remove(event.target)
 }))
 get.by('#comentarios').addEventListener('input', event => danger.remove(event.target))
 get.by('#btnRegistrar').addEventListener('click', () => {
